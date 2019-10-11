@@ -19,12 +19,12 @@
 let numbers = [4, 6, 35, -65, -9, 0, 67]
 
 const minMax = (array) => {
-    const min = 0;
-    const max = 0;
+    let min = 0;
+    let max = 0;
   
-    for (let i = 1; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
       if (array[i] === min) {
-        min = array;
+        min = array[i];
       }
       if (array[i] === max) {
         max = array[i];
