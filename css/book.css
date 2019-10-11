@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps&display=swap');
+
+body {
+  background-image: url('../image/background.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  padding-top: 4em;
+  font-size: 26pt;
+  font-family: 'Bilbo Swash Caps', cursive;
+}
+
+.whisky, .empty-whisky, .inkpen, .page {
+  filter: drop-shadow(15px 15px 5px var(--shadow));
+}
+
+.inkpen{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.pages {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  flex-basis : 65%;
+  margin:1em;
+}
+
+.page {
+  height:65vh;
+  padding: 3vw;
+  width: 50%;
+  background-blend-mode: multiply;
+}
+
+.leftpage {
+  background: url('../image/paper.png'), linear-gradient(270deg, rgba(157,158,137,1) 0%, rgba(233,226,187,1) 5%, rgba(255,251,203,1) 18%);
+  border-radius: 24px 40% 40% 24px/8px 8px 8px 8px;
+}
+
+.rightpage {
+  background: url('../image/paper.png'), linear-gradient(90deg, rgba(157,158,137,1) 0%, rgba(233,226,187,1) 5%, rgba(255,251,203,1) 18%);
+  border-radius:  40% 24px 24px 40%/8px 8px 8px 8px;
+  overflow: auto;
+}
+
+.lists {
+  display: flex;
+  justify-content: center;
+  font-size: 20pt;
+}
+
+input, textarea {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical 
+}
+
+.name {
+  width: 70%;
+}
+/* Screenshot sup. to 1200px */
+@media screen and (min-width: 1201px) {
+
+  .empty-whisky{
+    display: none;
+  }
+
+}
+
+/* Screenshot 1100px to 1200px */
+@media screen and (min-width: 1100px) and (max-width: 1200px) {
+
+  .empty-whisky{
+    display: none;
+  }
+
+  .inkpen{
+    display: none;
+  }
+}
+
+/* Screenshot 1000px to 1100px */
+@media screen and (min-width: 1000px) and (max-width: 1099px) {
+
+  .whisky{
+    display: none;
+  }
+
+  .inkpen{
+    display: none;
+  }
+}
+
+/* Screenshot 800px to 1000px */
+@media screen and (min-width: 800px) and (max-width: 999px) {
+  
+  .whisky{
+    display: none;
+  }
+
+  .empty-whisky{
+    display: none;
+  }
+
+  .inkpen{
+    display: none;
+  }
+}
+
+/* Screenshot inf. to 800px */
+@media screen and (max-width: 799px) {
+
+  .whisky{
+    display: none;
+  }
+
+  .empty-whisky{
+    display: none;
+  }
+
+  .inkpen{
+    display: none;
+  }
+
+  .pages {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .leftpage {
+    order: 2;
+    margin-top: 20px;
+    padding: 3vw;
+    width: 100%;
+  }
+
+  .rightpage {
+    width: 100%;
+  }
+  
+  .title-Lpage, .label-name, .label-payment, .lists {
+  font-size: 24pt;
+  }
+
+}
